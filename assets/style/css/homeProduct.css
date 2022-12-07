@@ -1,0 +1,131 @@
+.home-products {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 40px 0;
+}
+
+.products-container {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 40px;
+  overflow: hidden;
+}
+
+.title-content-products {
+  padding: 20px 0;
+  margin-left: 50px;
+}
+.title-content-products h2 {
+  text-transform: uppercase;
+  padding: 10px 0;
+  transform: translateX(50%);
+  opacity: 0.3;
+}
+.title-content-products.active h2 {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 1s;
+}
+
+.container-links {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-link-item {
+  width: 33%;
+  height: 100%;
+  margin: 10px;
+  background-color: transparent;
+  overflow: hidden;
+  transform: translateY(50%);
+  opacity: 0.3;
+  transition: all 1s;
+}
+.card-link-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.card-link-item:hover {
+  box-shadow: 0 0 20px 0 rgba(57, 57, 57, 0.6745098039);
+  transition: all 0.5s;
+}
+.card-link-item:hover .card-link-name {
+  transform: translateX(20px);
+  transition: all 1s;
+}
+.card-link-item:hover .card-link-name h5 {
+  color: #393939;
+  transition: all 1s;
+}
+.card-link-item:hover .card-link-name h5::after {
+  content: "";
+  width: 100%;
+  transition: all 1s;
+}
+.card-link-item.active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 1s;
+}
+.card-link-item.active:nth-child(2) {
+  transition: all 1s ease 0.2s;
+}
+.card-link-item.active:nth-child(3) {
+  transition: all 1s ease 0.4s;
+}
+
+.card-link-name {
+  width: auto;
+  overflow: hidden;
+  display: flex;
+  padding: 0 5px;
+}
+.card-link-name h5 {
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: rgba(57, 57, 57, 0.6745098039);
+  display: flex;
+  flex-direction: column;
+}
+.card-link-name h5::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  margin-top: 5px;
+  background-color: #393939;
+}
+
+@media (max-width: 1026px) {
+  .home-products {
+    min-height: auto;
+  }
+}
+@media (max-width: 769px) {
+  .products-container {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+  .container-links {
+    width: auto;
+    order: 2;
+  }
+  .card-link-item {
+    margin: 5px;
+  }
+  .title-content-products {
+    margin-left: 0;
+  }
+}
+
+/*# sourceMappingURL=homeProduct.css.map */
