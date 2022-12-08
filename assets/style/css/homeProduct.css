@@ -23,11 +23,11 @@
 .title-content-products h2 {
   text-transform: uppercase;
   padding: 10px 0;
-  transform: translateX(50%);
-  opacity: 0.3;
+  transform: translateY(100%);
+  opacity: 0;
 }
 .title-content-products.active h2 {
-  transform: translateX(0);
+  transform: translateY(0);
   opacity: 1;
   transition: all 1s;
 }
@@ -75,13 +75,13 @@
 .card-link-item.active {
   transform: translateY(0);
   opacity: 1;
-  transition: all 1s;
-}
-.card-link-item.active:nth-child(2) {
   transition: all 1s ease 0.2s;
 }
-.card-link-item.active:nth-child(3) {
+.card-link-item.active:nth-child(2) {
   transition: all 1s ease 0.4s;
+}
+.card-link-item.active:nth-child(3) {
+  transition: all 1s ease 0.6s;
 }
 
 .card-link-name {
