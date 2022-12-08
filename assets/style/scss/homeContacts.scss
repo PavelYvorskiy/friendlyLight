@@ -1,0 +1,115 @@
+.home-contacts{
+    margin: 0 auto;
+    padding: 40px;
+    width: 100%;
+    min-height: 530px;
+    height: 100%;
+    position: relative;
+}
+.contacts-container{
+    margin: 0 auto;
+    max-width: 1920px;
+    width: 100%;
+    height: 100%;
+    background-color:transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contacts-form{
+    width: 50%;
+    height: 100%;
+    background: #3939391d;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(30%);
+    opacity: 0;
+    transition: all 1s;
+    &.active{
+        transform: translateY(0);
+        opacity: 1;
+        transition: all 1s;
+    }
+}
+.home-form{
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    &__input{
+        padding: 10px 20px;
+        margin: 10px 0;
+        width: 100%;
+    }
+    &__button{
+        max-width: 120px;
+        width: 100%;
+        padding: 10px 20px;
+        background-color: #393939;
+        color: #fff;
+        margin-top: 10px;
+        &:hover{
+            background: #393939ac;
+            transition: all 0.5s;
+        }
+    }
+
+}
+.contacts-title{
+    width: 50%;
+    padding: 20px 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2{
+        text-transform: uppercase;
+        padding: 10px 0;
+        transform: translateY(-50%);
+        opacity: 0.3;
+        &.active{
+            transform: translateY(0);
+            opacity: 1;
+            transition: all 1s;
+        }
+    }
+    h4{
+        padding: 20px 0;
+        font-weight: 400;
+        transform: translateY(50%);
+        transition: all 1s;
+        opacity: 0;
+        &.active{
+            transform: translateY(0);
+            transition: all 1s ease 0.3s;
+            opacity: 1;
+        }
+    }
+    a{
+        color: #393939ac;
+        transform: translateY(-50%);
+        transition: all 1s;
+        opacity: 0;
+        &.active{
+            transform: translateY(0);
+            transition: all 1s ease 0.6s;
+            opacity: 1;
+        }
+    }
+}
+@media(max-width:769px){
+    .contacts-container{
+        flex-direction: column;
+    }
+    .contacts-form{
+        width: 100%;
+        padding: 20px;
+        order: 2;
+    }
+    .contacts-title{
+        width: 100%;
+    }
+}

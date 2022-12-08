@@ -1,0 +1,121 @@
+.home-contacts {
+  margin: 0 auto;
+  padding: 40px;
+  width: 100%;
+  min-height: 530px;
+  height: 100%;
+  position: relative;
+}
+
+.contacts-container {
+  margin: 0 auto;
+  max-width: 1920px;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contacts-form {
+  width: 50%;
+  height: 100%;
+  background: rgba(57, 57, 57, 0.1137254902);
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(30%);
+  opacity: 0;
+  transition: all 1s;
+}
+.contacts-form.active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 1s;
+}
+
+.home-form {
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.home-form__input {
+  padding: 10px 20px;
+  margin: 10px 0;
+  width: 100%;
+}
+.home-form__button {
+  max-width: 120px;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #393939;
+  color: #fff;
+  margin-top: 10px;
+}
+.home-form__button:hover {
+  background: rgba(57, 57, 57, 0.6745098039);
+  transition: all 0.5s;
+}
+
+.contacts-title {
+  width: 50%;
+  padding: 20px 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contacts-title h2 {
+  text-transform: uppercase;
+  padding: 10px 0;
+  transform: translateY(-50%);
+  opacity: 0.3;
+}
+.contacts-title h2.active {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 1s;
+}
+.contacts-title h4 {
+  padding: 20px 0;
+  font-weight: 400;
+  transform: translateY(50%);
+  transition: all 1s;
+  opacity: 0;
+}
+.contacts-title h4.active {
+  transform: translateY(0);
+  transition: all 1s ease 0.3s;
+  opacity: 1;
+}
+.contacts-title a {
+  color: rgba(57, 57, 57, 0.6745098039);
+  transform: translateY(-50%);
+  transition: all 1s;
+  opacity: 0;
+}
+.contacts-title a.active {
+  transform: translateY(0);
+  transition: all 1s ease 0.6s;
+  opacity: 1;
+}
+
+@media (max-width: 769px) {
+  .contacts-container {
+    flex-direction: column;
+  }
+  .contacts-form {
+    width: 100%;
+    padding: 20px;
+    order: 2;
+  }
+  .contacts-title {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=homeContacts.css.map */
