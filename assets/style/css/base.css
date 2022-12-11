@@ -135,12 +135,12 @@ section {
 
 @media (max-width: 767px) {
   h5 {
-    font-size: calc(12px + 3.4 * ((100vw - 320px) / 1920));
+    font-size: calc(10px + 6.8 * ((100vw - 320px) / 1920));
   }
 }
 @media (min-width: 767px) {
   h5 {
-    font-size: calc(12px + 2 * (100vw / 1920));
+    font-size: calc(10px + 4 * (100vw / 1920));
   }
 }
 

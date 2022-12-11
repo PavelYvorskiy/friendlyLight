@@ -47,7 +47,7 @@
     overflow: hidden;
     transform: translateY(50%);
     opacity: 0.3;
-    transition: all 1s;
+    // transition: all 1s;
     img{
         width: 100%;
         height: auto;
@@ -55,7 +55,6 @@
     }
     &:hover{
         box-shadow: 0 0 20px 0 #393939ac;
-        transition: all 0.5s;
         .card-link-name{
             transform: translateX(20px);
             transition: all 1s;
@@ -73,12 +72,12 @@
     &.active{
         transform: translateY(0);
         opacity: 1;
-        transition: all 1s ease 0.2s;
+        transition: all 1s;
         &:nth-child(2){
-            transition: all 1s ease 0.4s;
+            transition: all 1s ease 0.1s;
         }
         &:nth-child(3){
-            transition: all 1s ease 0.6s;
+            transition: all 1s ease 0.3s;
         }
     }
 }
