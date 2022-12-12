@@ -1,0 +1,179 @@
+.cardList-section{
+    width: 100%;
+    min-height: 530px;
+    height: 100%;
+    position: relative;
+    padding: 40px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cardList-container{
+    max-width: 1920px;
+    width: 100%;
+    display: block;
+    &__title{
+        padding: 10px 0;
+        text-transform: uppercase;
+        color: #393939;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: all 1s;
+        &.active{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+    &__text{
+       text-transform: uppercase;
+       color: #393939;
+       transform: translateY(50px);
+        opacity: 0;
+        transition: all 1s ease 0.6s;
+        &.active{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+}
+.cardList-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 20px 0;
+   margin-top: 30px;
+
+}
+.cardList-option-block{
+    width: 50%;
+    height: 100%;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: all 1s;
+    &.active{
+        transform: scale(1);
+        opacity: 1;
+    }
+    h4{
+        padding: 10px 0;
+    }
+    p{
+        text-transform: lowercase;
+        line-height: 1.5;
+    }
+   &__content{
+    padding: 10px 0;
+    color: #393939;
+    h5{
+        padding: 10px 0;
+        text-transform: uppercase;
+        font-weight: 500;
+        
+    }
+    p{
+        text-transform: lowercase;
+      
+    }
+    span{
+        display: flex;
+        align-items: flex-end;
+        margin: 10px 0;
+        b{
+            margin-left: 10px;
+        }
+        &::before{
+            content: url(../../svg/svgCard/light3.svg);
+            margin-right: 10px;
+        }
+    }
+   }
+}
+.cardList-images-block{
+    width: 50%;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: all 1s;
+    &.active{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.cardList-block-nav{
+    margin-top: 20px;
+
+}
+.button{
+    max-width: 120px;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #393939;
+    color: #fff;
+    margin-top: 10px;
+    &:hover{
+        background: #393939ac;
+        transition: all 0.5s;
+    }
+}
+.cardList-card{
+    max-width: 440px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-shadow: 0 0 10px 0 rgb(57 57 57 / 35%);
+    img{
+        width: 100%;
+        height: auto;
+    }
+    &__option{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: rgba(255, 255, 255, 0.888);
+        padding:5px 10px;
+        color: #393939;
+        h4{
+            text-transform: uppercase;
+            font-weight: 500;
+            width: 100%;
+            text-align: end;
+        }
+        span{
+            font-size: 12px;
+            margin: 3px 0;
+            display: flex;
+            align-items: flex-end;    
+            b{
+                margin-left: 10px;
+            }
+            &::before{
+                content: url(../../svg/svgCard/light3.svg);
+                margin-right: 3px;
+            }
+        }
+    }
+}
+@media(max-width:769px){
+    .cardList-box{
+        flex-direction: column;
+        margin-top: 5px;
+    }
+    .cardList-images-block{
+        width: 100%;
+        
+    }
+    .cardList-option-block{
+        width: 100%;
+        order: 2;
+    }
+    .cardList-section{
+        padding: 40px 20px;
+    }
+    .cardList-block-nav{
+        margin-top: 5px;
+    }
+  
+}

@@ -19,22 +19,29 @@ class Accordion {
     this.items[this.activeItem].classList.add(this.activeClass);
   }
 }
-const handlerItem = (itemIndex) => {
-  return () => {
-    btnAccordionItem.changeActiveItem(itemIndex);
-    visibleAccordionItem.changeActiveItem(itemIndex);
+function accordionHandler() {
+  const handlerItem = (itemIndex) => {
+    return () => {
+      btnAccordionItem.changeActiveItem(itemIndex);
+      visibleAccordionItem.changeActiveItem(itemIndex);
+    };
   };
-};
-const btnActiveItem = document.querySelectorAll(
-  ".productsPage-content-links__link"
-);
-const visibleActiveItem = document.querySelectorAll(
-  ".products-cards-content__item"
-);
+  const btnActiveItem = document.querySelectorAll(
+    ".productsPage-content-links__link"
+  );
+  const visibleActiveItem = document.querySelectorAll(
+    ".products-cards-content__item"
+  );
 
-const btnAccordionItem = new Accordion(btnActiveItem, "active", 0);
-const visibleAccordionItem = new Accordion(visibleActiveItem, "active", 0);
+  const btnAccordionItem = new Accordion(btnActiveItem, "active", 0);
+  const visibleAccordionItem = new Accordion(visibleActiveItem, "active", 0);
 
-btnActiveItem.forEach((item, index) => {
-  item.addEventListener("click", handlerItem(index));
-});
+  btnActiveItem.forEach((item, index) => {
+    item.addEventListener("click", handlerItem(index));
+  });
+}
+
+const visibleContent = document.querySelector(".visibleContent");
+if (visibleContent) {
+  accordionHandler();
+}
