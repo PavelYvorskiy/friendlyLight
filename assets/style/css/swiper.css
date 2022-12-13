@@ -8,6 +8,7 @@
   text-align: center;
   font-size: 18px;
   background: #fff;
+  display: flex;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,8 +16,8 @@
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
@@ -30,9 +31,25 @@
   object-fit: cover;
 }
 
-@media (max-width: 769px) {
+.swiper-button-next,
+.swiper-button-prev {
+  margin: 0 10px 0 0;
+  position: relative;
+  left: 0;
+}
+.swiper-button-next::after, .swiper-button-next::before,
+.swiper-button-prev::after,
+.swiper-button-prev::before {
+  content: "";
+  display: none;
+}
+
+@media (max-width: 869px) {
   .swiper {
     padding: 12px;
+  }
+  .swiper-slide {
+    flex-direction: column;
   }
 }
 

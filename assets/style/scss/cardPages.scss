@@ -37,50 +37,31 @@
         }
     }
 }
-.cardList-box{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    padding: 20px 0;
-   margin-top: 30px;
-
-}
 .cardList-option-block{
     width: 50%;
     height: 100%;
-    transform: scale(0.8);
+    transform: translateY(-50%);
     opacity: 0;
-    transition: all 1s;
+    transition: all 1s ease 0.5s;
+    text-align: start;
+    overflow: hidden;
     &.active{
-        transform: scale(1);
+        transform:translateY(0);
         opacity: 1;
     }
-    h4{
-        padding: 10px 0;
+    h3{
+        padding: 30px 0;
     }
     p{
-        text-transform: lowercase;
-        line-height: 1.5;
-    }
-   &__content{
-    padding: 10px 0;
-    color: #393939;
-    h5{
-        padding: 10px 0;
         text-transform: uppercase;
-        font-weight: 500;
-        
-    }
-    p{
-        text-transform: lowercase;
-      
+        line-height: 1.5;
+        padding: 20px 0;
     }
     span{
         display: flex;
         align-items: flex-end;
-        margin: 10px 0;
+        margin: 15px 0;
+        font-size: 14px;
         b{
             margin-left: 10px;
         }
@@ -89,29 +70,33 @@
             margin-right: 10px;
         }
     }
-   }
 }
 .cardList-images-block{
-    width: 50%;
+    width: 100%;
     transform: scale(0.8);
     opacity: 0;
     transition: all 1s;
+    margin-top: 30px;
     &.active{
         transform: scale(1);
         opacity: 1;
     }
 }
 .cardList-block-nav{
-    margin-top: 20px;
+   display: flex;
+   position: absolute;
+   left: 0px;
+   bottom: 70px;
+   width: 100%;
 
 }
 .button{
     max-width: 120px;
     width: 100%;
-    padding: 10px 20px;
+    padding: 5px 20px;
     background-color: #393939;
     color: #fff;
-    margin-top: 10px;
+    position: relative;
     &:hover{
         background: #393939ac;
         transition: all 0.5s;
@@ -133,30 +118,18 @@
         flex-direction: column;
         align-items: flex-start;
         background: rgba(255, 255, 255, 0.888);
-        padding:5px 10px;
+        padding:10px;
         color: #393939;
         h4{
             text-transform: uppercase;
             font-weight: 500;
             width: 100%;
-            text-align: end;
-        }
-        span{
-            font-size: 12px;
-            margin: 3px 0;
-            display: flex;
-            align-items: flex-end;    
-            b{
-                margin-left: 10px;
-            }
-            &::before{
-                content: url(../../svg/svgCard/light3.svg);
-                margin-right: 3px;
-            }
+            text-align: start;
         }
     }
 }
-@media(max-width:769px){
+
+@media(max-width:869px){
     .cardList-box{
         flex-direction: column;
         margin-top: 5px;
@@ -166,14 +139,29 @@
         
     }
     .cardList-option-block{
+        max-width: 440px;
         width: 100%;
         order: 2;
+        text-align: center;
+        margin-top: 10px;
+        h3{
+          padding: 10px 0;
+        }
+        p{
+            padding: 0;
+        }
+        span{
+            justify-content: center;
+        }
     }
     .cardList-section{
         padding: 40px 20px;
     }
     .cardList-block-nav{
         margin-top: 5px;
+        position: relative;
+        bottom: 0;
+        justify-content: center;
     }
   
 }
