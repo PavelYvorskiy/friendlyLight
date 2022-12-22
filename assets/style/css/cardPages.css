@@ -11,7 +11,7 @@
 }
 
 .cardList-container {
-  max-width: 1920px;
+  max-width: 1480px;
   width: 100%;
   display: block;
 }
@@ -42,7 +42,7 @@
 .cardList-option-block {
   width: 50%;
   height: 100%;
-  transform: translateY(-50%);
+  transform: translateY(-20%);
   opacity: 0;
   transition: all 1s ease 0.5s;
   text-align: start;
@@ -113,6 +113,7 @@
   height: auto;
   position: relative;
   box-shadow: 0 0 10px 0 rgba(57, 57, 57, 0.35);
+  z-index: 2;
 }
 .cardList-card img {
   width: 100%;
